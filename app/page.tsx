@@ -19,10 +19,32 @@ export default function Home() {
     // console.log(data.data.results);
   }
 
-  const handleSearch = (value: any) => {
-    if (value) {
-      // console.log(value);
-      setSearchInput(value+"in Delhi");
+  const getCurrentLocation = () => {
+    return new Promise((resolve, reject) => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          resolve,
+          (error) => {
+            reject(error);
+          }
+        );
+      } else {
+        reject(new Error('Geolocation is not supported by this browser.'));
+      }
+    });
+  };
+
+  const handleSearch = async (value:any) => {
+    try {
+      const position:any = await getCurrentLocation();
+      const locationString = `${position.coords.latitude},${position.coords.longitude}`;
+      setSearchInput(`${value} in ${locationString}`);
+    } catch (error:any) {
+      if (error.code === 1) {
+        alert('Please enable location');
+      } else {
+        console.error('Error getting current location', error);
+      }
     }
   };
   
