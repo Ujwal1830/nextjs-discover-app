@@ -20,9 +20,9 @@ function Hero({ setSearchInput, handleSearch }:any) {
               onChange={(e)=>{setSearchInput(e.target.value)}}
                 type="text"
                 placeholder='Search anything'
-                className='bg-[#faebff] px-4 py-4 text-xl rounded-full border-[#d58bea] border-x-4 flex-1 outline-none transition-all duration-200 hover:scale-105'
+                className='bg-[#faebff] px-4 py-4 text-xl rounded-full border-[#d58bea] border-x-4 flex-1 outline-none transition-all duration-200 hover:scale-105 text-center'
               />
-              <svg onClick={handleSearch} className='ml-2 absolute right-2 top-1 bg-white cursor-pointer p-1 rounded-full' width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+              {/* <svg onClick={handleSearch} className='ml-2 absolute right-2 top-1 bg-white cursor-pointer p-1 rounded-full' width="50px" height="50px" viewBox="0 0 24 24" fill="none">
                 <g strokeWidth="0"></g>
                 <g strokeLinecap="round" strokeLinejoin="round"></g>
                 <g>
@@ -37,7 +37,7 @@ function Hero({ setSearchInput, handleSearch }:any) {
                     </clipPath>
                   </defs>
                 </g>
-              </svg>
+              </svg> */}
             </div>
           </div>
 

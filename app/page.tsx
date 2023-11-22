@@ -22,7 +22,7 @@ export default function Home() {
   const handleSearch = (value: any) => {
     if (value) {
       // console.log(value);
-      setSearchInput(value);
+      setSearchInput(value+"in Delhi");
     }
   };
   
