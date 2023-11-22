@@ -34,15 +34,14 @@ export default function Home() {
     });
   };
 
-  const handleSearch = async (value:any) => {
-    try {
-      const position:any = await getCurrentLocation();
-      const locationString = `${position.coords.latitude},${position.coords.longitude}`;
-      setSearchInput(`${value} in ${locationString}`);
-    } catch (error:any) {
-      if (error.code === 1) {
-        alert('Please enable location');
-      } else {
+  const handleSearch = async(value: any) => {
+    if (value) {
+      // console.log(value);
+      try {
+        const position:any = await getCurrentLocation();
+        const locationString = `${position.coords.latitude},${position.coords.longitude}`;
+        setSearchInput(`${value} in ${locationString}`);
+      } catch (error) {
         console.error('Error getting current location', error);
       }
     }
