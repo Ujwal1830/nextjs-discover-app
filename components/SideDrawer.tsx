@@ -29,7 +29,7 @@ function SideDrawer({place, close }: any) {
         <div>
             <h2 className='line-clamp-2 text-2xl'>{place.name}</h2>
 
-            <Image 
+            <Image unoptimized
                 className='w-full mt-3 h-[270px] object-cover rounded-xl' 
                 src={BASE_URL_PHOTO+place?.photos[0]?.photo_reference+"&key="+process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY} 
                 alt="placeholder" 

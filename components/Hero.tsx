@@ -7,7 +7,7 @@ function Hero({ setSearchInput, handleSearch }:any) {
   return (
     <div className='text-center '>
       <div>
-        <Image src='/bg.png' alt='hero-image' width={1000} height={100} className='transition-all duration-700 w-full absolute mt-[-70px] z-[-1]' />
+        <Image unoptimized src='/bg.png' alt='hero-image' width={1000} height={100} className='transition-all duration-700 w-full absolute mt-[-70px] z-[-1]' />
 
         <div className='pt-10 relative'>
           <h2 className='text-[43px] text-[#d58bea] tracking-widest font-bold transition-all duration-500  hover:text-[46px] uppercase'>

@@ -8,7 +8,7 @@ function PlaceCard({ place }:any) {
     <div className='w-full flex flex-col justify-between bg-white z-10 border-[1px] rounded-xl shadow-md'>
         <div className='flex gap-3 flex-col justify-between'>
             {/* {place.photos && place.photos[0] && ( */}
-                <Image
+                <Image unoptimized
                 className='w-full h-40 object-cover rounded-xl'
                 src={place.photos && place.photos[0] 
                         ? `${BASE_URL_PHOTO}&photo_reference=${place.photos[0].photo_reference}&key=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY}`
